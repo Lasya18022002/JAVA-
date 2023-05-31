@@ -1,0 +1,16 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        char ch;
+        for(ch='A';ch<='Z';++ch)
+        {
+            if(ch!='A'&&ch!='E'&&ch!='I'&&ch!='O'&&ch!='U')
+            {
+                System.out.print(ch+" ");
+            }
+        } 
+    }
+}    
