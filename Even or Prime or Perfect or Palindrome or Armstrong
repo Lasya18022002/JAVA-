@@ -1,0 +1,162 @@
+import java.util.*;
+class Main
+{
+	public static void main(String args[]) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		System.out.println("Main: \n 1.check even \n 2.check prime \n 3.check perfect \n 4.chech palindrome \n 5.chech armstrong");
+		System.out.println("enter your choice:");
+		int choice=sc.nextInt();
+		switch(choice)
+		{
+		 case 1:
+		    if(checkEven(a)==true)
+		    {
+		        System.out.print(a+"is an even number");
+		    }
+		    else
+		    {
+		        System.out.print(a+"is not an even number");
+		    }
+		    break;
+		 case 2:
+		     if(checkPrime(a)==true)
+		     {
+		         System.out.print(a+"is a prime number");
+		     }
+		     else
+		     {
+		         System.out.print(a+"is not a prime number");
+		     }
+		     break;
+		 case 3:
+		     if(checkPerfect(a)==true)
+		     {
+		         System.out.print(a+"is a perfect number");
+		     }
+		     else
+		     {
+		         System.out.print(a+"is not a perfect number");
+		     }
+		     break;
+		 case 4:
+		     if(checkPalindrome(a)==true)
+		     {
+		         System.out.print(a+"is a palindrome number");
+		     }
+		     else
+		     {
+		         System.out.print(a+"is not a palindrome number");
+		     }
+		     break;
+		 case 5:
+		     if(checkArmstrong(a)==true)
+		     {
+		         System.out.print(a+"is an armstrong number");
+		     }
+		     else
+		     {
+		         System.out.print(a+"is not an armstrong number");
+		     }
+		     break;
+		}
+	}
+	public static boolean checkEven(int a)
+	{
+	    if(a%2==0)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	public static boolean checkPrime(int a)
+	{
+	    int c=0;
+	    for(int i=0;i<a;i++)
+	    {
+	        if(a%i==0)
+	        {
+	            c++;
+	        }
+	    }
+	    if(c==2)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	public static boolean checkPerfect(int a)
+	{
+	    int sum=0;
+	    for(int i=0;i<a;i++)
+	    {
+	        if(a%i==0)
+	        {
+	            sum=sum+i;
+	        }
+	    }
+	    if(sum==a)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	public static boolean checkPalindrome(int a)
+	{
+	    int r,rev=0,temp=a;
+	    while(a>0)
+	    {
+	       r=a%10;
+	       rev=rev*10+r;
+	       a=a/10;
+	    }
+	    if(temp==rev)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	public static boolean checkArmstrong(int a)
+	{
+	    int c=0,t=a,t1=a;
+	    while(a>0)
+	    {
+	       a=a/10;
+	       c++;
+	    }
+	    int r;
+	    while(t>0)
+	    {
+	        r=t%10;
+	        t=t/10;
+	        int pow=1,sum=0;
+	        for(int i=1;i<c;i++)
+	        {
+	            pow=pow*r;
+	        }
+	        sum=sum+pow;
+	    }
+	    int sum=0;
+	    if(sum==t1)
+	    {
+	        return true;
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+}
