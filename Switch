@@ -1,0 +1,27 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        switch(ch)
+        {
+            case 'A':
+                System.out.println("Hi");
+                break;
+            case 'B':
+                System.out.println("My");
+                break;
+            case 'C':
+                System.out.println("Name");
+                break;
+            case 'D':
+                System.out.println("Is");
+                break;
+            case 'E':
+                System.out.println("Computer");
+                break;
+        }
+    }
+}
