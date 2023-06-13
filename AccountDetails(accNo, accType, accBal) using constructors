@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Account acc=new Account();
+        acc.setAccountDetails(30542,"Savings",100000);
+        acc.withdraw();
+        acc.deposit();
+        acc.dispAccountDetails();
+    }
+}
+    class Account
+    {
+        int accountNo;
+        String accountType;
+        int accountBalance;
+        int n;
+        void setAccountDetails(int accNo,String accType,int accBal)
+        {
+            accountNo=accNo;
+            accountType=accType;
+            accountBalance=accBal;
+        }
+        void withdraw()
+        {
+            accountBalance=accountBalance-n;
+        }
+        void deposit()
+        {
+            accountBalance=accountBalance+n;
+        }
+        void dispAccountDetails()
+        {
+            System.out.println("Account Number:"+accountNo+"\nAccount Type:"+accountType+"\nAccount Balance:"+accountBalance);
+        }
+    }
