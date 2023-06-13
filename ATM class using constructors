@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Atm obj=new Atm();
+        obj.setAtmDetails("Lasya","Konde","II-357-1","Madanapalle",517325,"Andhrapradesh","9346373738","lasyareddykonde@gmail.com","Indian Bank","Savings","12345678910");
+        obj.displayDetails();
+    }
+}
+    class Atm
+    {
+        String firstName;
+        String secondName;
+        String addressLane;
+        String cityName;
+        int pinCode;
+        String stateName;
+        String phoneNumber;
+        String gmail;
+        String bankName;
+        String accountType;
+        String accountNumber;
+        void setAtmDetails(String sfirstName,String ssecondName,String saddressLane,String scityName,int spinCode,String sstateName,String sphoneNumber,String sgmail,String sbankName,String saccountType,String saccountNumber)
+        {
+            firstName=sfirstName;
+            secondName=ssecondName;
+            addressLane=saddressLane;
+            cityName=scityName;
+            pinCode=spinCode;
+            stateName=sstateName;
+            phoneNumber=sphoneNumber;
+            gmail=sgmail;
+            bankName=sbankName;
+            accountType=saccountType;
+            accountNumber=saccountNumber;
+        }
+        void displayDetails()
+        {
+            System.out.println("FirstName:"+firstName+"\nSecondName:"+secondName+"\nAddressLane:"+addressLane+"\nCityName:"+cityName+"\nPinCode:"+pinCode+"\nStateName:"+stateName+"\nPhoneNumber:"+phoneNumber+"\nGmail:"+gmail+"\nBankName:"+bankName+"\nAccountType:"+accountType+"\nAccountNumber:"+accountNumber);
+        }
+    }
