@@ -1,0 +1,32 @@
+import java.util.*;
+class Main
+{
+    static void arrayPrimes(int arr[])
+    {
+        int i;
+        for(i=0;i<arr.length;i++)
+        {
+            int j,n=arr[i];
+            for(j=2;j<n;j++)
+            {
+              if(n%j==0)
+              break;
+            }
+            if(j==n)
+            {
+                System.out.print(n+" ");
+            }
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt(),i;
+        int arr[]=new int[size];
+        for(i=0;i<size;i++)
+        {
+           arr[i]=sc.nextInt();
+        }
+        arrayPrimes(arr);
+    }
+}
