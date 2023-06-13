@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Student obj=new Student();
+        obj.setStudDetails(549,"Lasya",49,49,49);
+        obj.calculateTotal();
+        obj.displayDetails();
+    }
+}
+    class Student
+    {
+        int rollNum;
+        String studName;
+        int mark1,mark2,mark3,totalMarks;
+        void setStudDetails(int srollNum,String name,int m1,int m2,int m3)
+        {
+            rollNum=srollNum;
+            studName=name;
+            mark1=m1;
+            mark2=m2;
+            mark3=m3;
+        }
+        void calculateTotal()
+        {
+            totalMarks=mark1+mark2+mark3;
+        }
+        void displayDetails()
+        {
+            System.out.println("RollNum:"+rollNum+"\nname:"+studName+"\ntotalMarks:"+totalMarks);
+        }
+    }
