@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Student S1=new Student();
+        S1.name="Lasya";
+        S1.id=549;
+        S1.percentage=94;
+        S1.instituteName="Thopstech";
+        S1.displayDetails();
+    }
+}
+    class Student
+    {
+        String name;
+        int id;
+        double percentage;
+        String instituteName;
+        Student()
+        {
+            
+        }
+        Student(String sname,int sid,double spercentage,String sinstituteName)
+        {
+            name=sname;
+            id=sid;
+            percentage=spercentage;
+            instituteName=sinstituteName;
+        }
+        void displayDetails()
+        {
+            System.out.println("Name:"+name+"\nID:"+id+"\nPercentage:"+percentage+"\nInstitute Name:"+instituteName);
+        }
+    }
