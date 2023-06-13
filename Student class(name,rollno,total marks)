@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Student S1=new Student();
+        S1.rollNum=549;
+        S1.studName="Lasya";
+        S1.mark1=49;
+        S1.mark2=49;
+        S1.mark3=49;
+        S1.totalMarks=147;
+        S1.displayDetails();
+    }
+}
+    class Student
+    {
+        int rollNum;
+        String studName;
+        int mark1;
+        int mark2;
+        int mark3;
+        int totalMarks;
+        Student()
+        {
+          System.out.println("No details entered");  
+        }
+        Student(int srollNum,String sstudName,int smark1,int smark2,int smark3)
+        {
+            rollNum=srollNum;
+            studName=sstudName;
+            mark1=smark1;
+            mark2=smark2;
+            mark3=smark3;
+        }
+        Student(int stotalMarks)
+        {
+            totalMarks=stotalMarks;
+        }
+        Student(int srollNum,String sstudName,int stotalMarks)
+        {
+            rollNum=srollNum;
+            studName=sstudName;
+            totalMarks=stotalMarks;
+        }
+        void displayDetails()
+        {
+            System.out.println("RollNum:"+rollNum+"\nStudent Name:"+studName+"\nMark1:"+mark1+"\nMark2:"+mark2+"\nMark3:"+mark3+"\nTotal Marks:"+totalMarks);
+        }
+    }
